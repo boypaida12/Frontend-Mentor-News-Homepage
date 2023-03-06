@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    --color-soft-orange: hsl(35, 77%, 62%);
+    --color-soft-red: hsl(5, 85%, 63%);
+    --color-off-white: hsl(36, 100%, 99%);
+    --color-grayish-blue: hsl(233, 8%, 79%);
+    --color-dark-grayish-blue: hsl(236, 13%, 42%);
+    --color-very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    max-width: 68.75rem;
+    margin-inline: auto;
+    background-color: var(--color-off-white);
+    
+}
+
+p {
+    font-size: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 5rem 3rem;
+
+}
+
+.nav{
+    align-self: center;
+    display: flex;
+    gap: 2.25rem;
+}
+
+.menu-open {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav a {
+    color: var(--color-dark-grayish-blue);
+}
+
+.nav a:hover {
+    color: var(--color-soft-red);
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.75rem;
+}
+
+.new {
+    background-color: var(--color-very-dark-blue);
+    padding: 1.5rem 1.25rem;
+}
+
+.new h1 {
+    color: var(--color-soft-orange);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.new p {
+    color: var(--color-grayish-blue);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+.new p:last-child {
+    margin-bottom: 0;
+}
+
+hr {
+    margin-bottom: 2rem;
+    color: var(--color-grayish-blue);
+}
+.new a {
+    color: var(--color-off-white);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.new a:hover,
+.new a:focus {
+    color: var(--color-soft-orange);
+}
+
+.bright-future {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.bright-future h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.paragraph-button {
+    line-height: 1.5;
+    color: var(--color-dark-grayish-blue);
+}
+
+.paragraph-button button {
+    margin-top: 2rem;
+    padding: .75rem 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--color-soft-red);
+    border-color: transparent;
+    letter-spacing: 4px;
+    color: var(--color-off-white);
+}
+
+.paragraph-button button:hover,
+.paragraph-button button:focus {
+    background-color: var(--color-very-dark-blue);
+}
+
+.growth {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+}
+
+.gr-1, .gr-2, .gr-3 {
+    display: flex;
+    gap: 1rem;
+}
+.growth {
+    margin-top: 5rem;
+}
+
+.gr-1 img, .gr-2 img, .gr-3 img {
+    width: 100px;
+    height: 127px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.text h1 {
+    color: var(--color-grayish-blue);
+}
+
+.text a {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.text a:hover,
+.text a:focus {
+    color: var(--color-soft-red);
+    cursor: pointer;
+}
+
+.transparent-menu {
+    display: none;
+}
+
+@media screen and (max-width:425px) {
+    body {
+        padding-inline: 1rem;
+    }
+
+    header {
+        z-index: -1;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-open {
+        display: block;
+    }
+
+    .menu-close, .transparent-menu, .mobile-nav {
+        position: absolute;
+    }
+
+    .transparent-menu {
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 8, 8, 0.503);
+        z-index: 1;
+    }
+
+    .menu-close {
+        top: 5rem;
+        right: 1rem;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        top: 10rem;
+        left: 3rem;
+    }
+
+    .mobile-nav a {
+        color: var(--color-dark-grayish-blue);
+
+    }
+
+    .solid-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70%;
+        background-color: var(--color-off-white);
+    }
+   
+    .hero-section, .bright-future, .growth {
+        grid-template-columns: 1fr;
+    }
+
+
+}
