@@ -22,6 +22,7 @@
 body {
     max-width: 68.75rem;
     margin-inline: auto;
+    padding-inline: 1rem;
     background-color: var(--color-off-white);
     
 }
@@ -179,10 +180,7 @@ hr {
     display: none;
 }
 
-@media screen and (max-width:425px) {
-    body {
-        padding-inline: 1rem;
-    }
+@media screen and (max-width:768px) {
 
     header {
         z-index: -1;
